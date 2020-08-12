@@ -1,0 +1,35 @@
+package com.javalec.ex;
+
+public class StudentInfo {
+	
+    private Student student;
+    
+    //private Student student = new Student(); //첫번째 방법
+    
+    public StudentInfo() {}
+    
+    public StudentInfo(Student student) { // <ref bean= "student1"/>로 호출한다.
+    	this.student = student;
+    }
+    
+    public void getStudentInfo() {
+    	if(student != null) {
+    		System.out.println("이름: " + student.getName());
+    		System.out.println("나이: " + student.getAge());
+    		System.out.println("학년: " + student.getGradeNum());
+    		System.out.println("반: " + student.getClassNum());
+    		System.out.println("-----------------------");
+    	}
+    }
+
+	public Student getStudent() {
+		return student;
+	}
+
+	public void setStudent(Student student) {
+		this.student = student;
+	}
+    
+    
+    
+}

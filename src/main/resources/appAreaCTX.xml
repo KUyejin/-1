@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="area1" class="com.javalec.ex.Triangle" >
+	                    <!-- Triangle에 디폴트 생성자 호출 -->
+	    <property name="width" value="10" />
+		<property name="height" value="3"/>
+	</bean>	
+	
+	<bean id="area2" class="com.javalec.ex.Rectangle">
+	
+	    <property name="width" value="10" />
+		<property name="height" value="2"/>
+		
+		<!-- myCalculator.setCalculator(calculator); -->
+		<!-- myCalculator.setFirstNum(10); -->
+		<!-- myCalculator.secondNum(2);-->
+	</bean>
+	
+	<bean id="area3" class="com.javalec.ex.Triangle"/>
+	<bean id="area4" class="com.javalec.ex.Rectangle"/>
+	
+	
+
+</beans>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<context:annotation-config/>
+	<!-- 자바파일로 해석해서 한번더 xml파일로 만들어 준다. -->
+    <bean class = "com.javalec.ex.ApplicationConfig"/>
+	
+	<bean id ="student1" class="com.javalec.ex.Student2">
+	    <constructor-arg value = "홍길동"/> 
+	    <constructor-arg value = "9살"/>
+	    <constructor-arg>
+	          <list>
+	              <value>수영</value>
+	              <value>요리</value>
+	          </list>
+	    </constructor-arg>
+	      
+	    <property name = "height">
+	        <value>187</value>
+	    </property>
+	      
+	    <property name="weight" value ="84"></property>
+	      
+	</bean>    
+	    
+	
+	<bean id ="studentInfo1" class="com.javalec.ex.StudentInfo2">
+	    <property name = "student">  
+	        <ref bean = "student1"/>
+	    </property>    
+	         	
+	</bean>
+	
+	
+
+</beans>
